@@ -2,18 +2,33 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{% block title %}{% endblock %}</title>
-    <link href="{% static "css/blog.css" %}" rel="stylesheet">
-  </head>
-  <body>
-    <div id="content">
-      {% block content %}
-      {% endblock %}
-    </div>
-    <div id="sidebar">
-      <h2>&copy; Thought Canvas</h2>
-      <p>&trade; Thought Canvas: Your Thoughts Playground </p>
-    </div>
-  </body>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link href="{% static "css/blog.css" %}" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    #content {
+      min-height: 100%;
+    }
+    #sidebar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <footer id="sidebar">
+    <h2>&copy; Thought Canvas</h2>
+    <p>&trade; Thought Canvas: Your Thoughts Playground</p>
+  </footer>
+</body>
 </html>
+
