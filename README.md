@@ -1,5 +1,3 @@
-# Creating an updated README.md file with SMTP instructions
-
 content = """
 # Thought Canvas
 
